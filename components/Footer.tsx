@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers, Instagram, Linkedin, Facebook, MessageCircle, ArrowRight } from 'lucide-react';
+import { Instagram, Linkedin, Facebook, MessageCircle, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -32,8 +32,72 @@ const Footer: React.FC = () => {
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
                 <div className="flex items-center gap-2 mb-4">
-                <div className="bg-gradient-to-tr from-violet-600 to-fuchsia-600 p-2 rounded-lg shadow-lg shadow-violet-500/20">
-                    <Layers className="text-white w-6 h-6" />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-violet-500 blur-[10px] opacity-30"></div>
+                  <div className="relative z-10">
+                    <svg className="w-8 h-8" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="logo">
+                      <defs>
+                        {/* main gradient for top ribbon */}
+                        <linearGradient id="gTopFooter" x1="0" x2="1" y1="0" y2="1">
+                          <stop offset="0" stopColor="#7fe3d6"/>
+                          <stop offset="0.55" stopColor="#4bd6d1"/>
+                          <stop offset="1" stopColor="#2aa7c9"/>
+                        </linearGradient>
+
+                        {/* darker gradient for bottom ribbon */}
+                        <linearGradient id="gBotFooter" x1="0" x2="1" y1="0" y2="1">
+                          <stop offset="0" stopColor="#4ba8b6"/>
+                          <stop offset="0.5" stopColor="#3b98a8"/>
+                          <stop offset="1" stopColor="#2c7a8a"/>
+                        </linearGradient>
+
+                        {/* inner bevel highlight */}
+                        <linearGradient id="edgeFooter" x1="0" x2="1" y1="0" y2="1">
+                          <stop offset="0" stopColor="rgba(255,255,255,0.48)"/>
+                          <stop offset="1" stopColor="rgba(255,255,255,0.06)"/>
+                        </linearGradient>
+
+                        <filter id="softShadowFooter" x="-50%" y="-50%" width="200%" height="200%">
+                          <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+                          <feOffset in="blur" dx="0" dy="6" result="offset"/>
+                          <feMerge>
+                            <feMergeNode in="offset"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                      </defs>
+
+                      {/* center coordinates: we will build a rotated, isometric ribbon */}
+                      <g transform="translate(120,120)">
+
+                        {/* bottom ribbon (slightly behind) */}
+                        <g transform="rotate(20)">
+                          <path d=" M -80,0 L -30,-48 L 30,-48 L 80,0 L 30,48 L -30,48 Z " fill="url(#gBotFooter)"/>
+                          <path d=" M -40,0 L -10,-24 L 10,-24 L 40,0 L 10,24 L -10,24 Z " fill="black" fillOpacity="0.08"/>
+                          <path d=" M -80,0 L -30,-48 L -10,-24 L -40,0 Z " fill="url(#edgeFooter)" opacity="0.28"/>
+                          <path d=" M 80,0 L 30,48 L 10,24 L 40,0 Z " fill="rgba(0,0,0,0.18)"/>
+                        </g>
+
+                        {/* top ribbon (in front) */}
+                        <g transform="rotate(-20)">
+                          <path d=" M -80,0 L -30,-48 L 30,-48 L 80,0 L 30,48 L -30,48 Z " fill="url(#gTopFooter)"/>
+                          <path d=" M -40,0 L -10,-24 L 10,-24 L 40,0 L 10,24 L -10,24 Z " fill="black" fillOpacity="0.06"/>
+                          <path d=" M 30,-48 L 80,0 L 40,0 L 10,-24 Z " fill="url(#edgeFooter)" opacity="0.26"/>
+                          <path d=" M -30,48 L -80,0 L -40,0 L -10,24 Z " fill="rgba(0,0,0,0.12)"/>
+                        </g>
+
+                        <g transform="rotate(0)">
+                          <path d=" M 0,-12 L 10,0 L 0,12 L -10,0 Z " fill="#00121a" />
+                          <path d=" M 0,-9 L 6,0 L 0,9 L -6,0 Z " fill="rgba(255,255,255,0.06)"/>
+                        </g>
+
+                        <g>
+                          <path d=" M -80,0 L -30,-48 L 30,-48 L 80,0 L 30,48 L -30,48 Z " fill="none" stroke="rgba(0,0,0,0.12)" strokeWidth="1.5" opacity="0.9"/>
+                        </g>
+
+                      </g>
+                    </svg>
+                  </div>
                 </div>
                 <div className="flex flex-col">
                     <span className="text-2xl font-bold text-white font-space leading-none tracking-tight">Rudraksh</span>
@@ -102,7 +166,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="mt-6 p-4 rounded-xl bg-slate-900/50 border border-white/5">
                 <p className="text-xs text-slate-500">Need immediate assistance?</p>
-                <p className="text-sm font-bold text-white mt-1 font-mono">+91 98765 43210</p>
+                <p className="text-sm font-bold text-white mt-1 font-mono">+91 81281 55486 | +91 78743 31074</p>
             </div>
           </div>
         </div>

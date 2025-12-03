@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { TrendingUp, Play, Layers } from 'lucide-react';
+import { TrendingUp, Play } from 'lucide-react';
 import { services } from './Services';
 
 const Hero: React.FC = () => {

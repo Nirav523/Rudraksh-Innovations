@@ -9,16 +9,16 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { id: 1, title: 'Rudraksh: Cyber Motion', category: 'Animated', img: 'https://placehold.co/600x800/1e1b4b/9333ea?text=Rudraksh\\nCyber+Motion' },
-  { id: 2, title: 'Rudraksh: Diwali Special', category: 'Festival', img: 'https://placehold.co/600x800/78350f/fbbf24?text=Rudraksh\\nDiwali+Special' },
-  { id: 3, title: 'Rudraksh: SEO Secrets', category: 'Informative', img: 'https://placehold.co/600x800/164e63/67e8f9?text=Rudraksh\\nSEO+Secrets' },
-  { id: 4, title: 'Rudraksh: Product Launch', category: 'Product', img: 'https://placehold.co/600x800/1e40af/60a5fa?text=Rudraksh\\nProduct+Launch' },
-  { id: 5, title: 'Rudraksh: Christmas Campaign', category: 'Festival', img: 'https://placehold.co/600x800/7f1d1d/fca5a5?text=Rudraksh\\nChristmas' },
-  { id: 6, title: 'Rudraksh: AI Trends 2025', category: 'Informative', img: 'https://placehold.co/600x800/064e3b/6ee7b7?text=Rudraksh\\nAI+Trends' },
-  { id: 7, title: 'Rudraksh: Food & Beverage Ad', category: 'Product', img: 'https://placehold.co/600x800/854d0e/fde047?text=Rudraksh\\nFood+Ad' },
-  { id: 8, title: 'Rudraksh: Neon Vibes', category: 'Animated', img: 'https://placehold.co/600x800/4c0519/f472b6?text=Rudraksh\\nNeon+Vibes' },
-  { id: 9, title: 'Rudraksh: Summer Sale', category: 'Product', img: 'https://placehold.co/600x800/065f46/6ee7b7?text=Rudraksh\\nSummer+Sale' },
-  { id: 10, title: 'Rudraksh: Luxury Branding', category: 'Product', img: 'https://placehold.co/600x800/171717/d4d4d4?text=Rudraksh\\nLuxury+Branding' },
+  { id: 1, title: 'New Animated Ideas', category: 'Animated', img: '/images/woman.jpg' },
+  { id: 2, title: 'Diwali Special', category: 'Festival', img: '/images/Diwali.jpg' },
+  { id: 3, title: 'Knowledge Trends', category: 'Informative', img: '/images/manager.jpg' },
+  { id: 4, title: 'Product Launch', category: 'Product', img: '/images/product_1.jpg' },
+  { id: 5, title: 'Christmas Campaign', category: 'Festival', img: '/images/Christmas.jpg' },
+  { id: 6, title: 'Informative AI', category: 'Informative', img: '/images/jaipur.jpg' },
+  { id: 7, title: 'Food & Beverage Ad', category: 'Product', img: '/images/food.jpg' },
+  { id: 8, title: 'Animated Designs', category: 'Animated', img: '/images/hiring.jpg' },
+  { id: 9, title: 'New Product', category: 'Product', img: '/images/bag.jpg' },
+  { id: 10, title: 'New Year Special', category: 'festival', img: '/images/new-year.jpg' },
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
