@@ -46,13 +46,13 @@ function App() {
         <a href="#" className="p-3 bg-slate-900/80 backdrop-blur border border-white/10 rounded-full text-white hover:bg-rose-600 hover:border-rose-500 transition-all shadow-lg hover:scale-110 hover:shadow-rose-500/30 group" title="Instagram">
           <Instagram size={20} />
         </a>
-        <a href="#" className="p-3 bg-slate-900/80 backdrop-blur border border-white/10 rounded-full text-white hover:bg-blue-600 hover:border-blue-500 transition-all shadow-lg hover:scale-110 hover:shadow-blue-500/30 group" title="Facebook">
+        {/* <a href="#" className="p-3 bg-slate-900/80 backdrop-blur border border-white/10 rounded-full text-white hover:bg-blue-600 hover:border-blue-500 transition-all shadow-lg hover:scale-110 hover:shadow-blue-500/30 group" title="Facebook">
           <Facebook size={20} />
         </a>
         <a href="#" className="p-3 bg-slate-900/80 backdrop-blur border border-white/10 rounded-full text-white hover:bg-blue-700 hover:border-blue-600 transition-all shadow-lg hover:scale-110 hover:shadow-blue-600/30 group" title="LinkedIn">
           <Linkedin size={20} />
-        </a>
-        <a href="#" className="p-3 bg-slate-900/80 backdrop-blur border border-white/10 rounded-full text-white hover:bg-green-500 hover:border-green-400 transition-all shadow-lg hover:scale-110 hover:shadow-green-500/30 group" title="WhatsApp">
+        </a> */}
+        <a href="https://wa.me/917874331074" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-900/80 backdrop-blur border border-white/10 rounded-full text-white hover:bg-green-500 hover:border-green-400 transition-all shadow-lg hover:scale-110 hover:shadow-green-500/30 group" title="WhatsApp">
           <MessageCircle size={20} />
         </a>
       </div>

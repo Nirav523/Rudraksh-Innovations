@@ -160,13 +160,13 @@ const Footer: React.FC = () => {
                <a href="#" className="aspect-square rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center hover:bg-blue-700 hover:border-blue-600 transition-all group shadow-lg hover:shadow-blue-900/20 hover:-translate-y-1">
                   <Linkedin className="w-5 h-5 text-slate-400 group-hover:text-white" />
                </a>
-               <a href="#" className="aspect-square rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center hover:bg-green-500 hover:border-green-400 transition-all group shadow-lg hover:shadow-green-900/20 hover:-translate-y-1">
+               <a href="https://wa.me/917874331074" target="_blank" rel="noopener noreferrer" className="aspect-square rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center hover:bg-green-500 hover:border-green-400 transition-all group shadow-lg hover:shadow-green-900/20 hover:-translate-y-1">
                   <MessageCircle className="w-5 h-5 text-slate-400 group-hover:text-white" />
                </a>
             </div>
             <div className="mt-6 p-4 rounded-xl bg-slate-900/50 border border-white/5">
                 <p className="text-xs text-slate-500">Need immediate assistance?</p>
-                <p className="text-sm font-bold text-white mt-1 font-mono">+91 81281 55486 | +91 78743 31074</p>
+                <p className="text-sm font-bold text-white mt-1 font-mono">+91 78743 31074 | +91 81281 55486</p>
             </div>
           </div>
         </div>
