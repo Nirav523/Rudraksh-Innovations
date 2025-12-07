@@ -154,10 +154,10 @@ const Footer: React.FC = () => {
                <a href="https://www.instagram.com/rudraksh_innovations_/" target="_blank" rel="noopener noreferrer" className="aspect-square rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center hover:bg-rose-600 hover:border-rose-500 transition-all group shadow-lg hover:shadow-rose-900/20 hover:-translate-y-1">
                   <Instagram className="w-5 h-5 text-slate-400 group-hover:text-white" />
                </a>
-               <a href="#" className="aspect-square rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 transition-all group shadow-lg hover:shadow-blue-900/20 hover:-translate-y-1">
+               <a href="https://www.facebook.com/profile.php?id=61584521290784" target="_blank" rel="noopener noreferrer" className="aspect-square rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 transition-all group shadow-lg hover:shadow-blue-900/20 hover:-translate-y-1">
                   <Facebook className="w-5 h-5 text-slate-400 group-hover:text-white" />
                </a>
-               <a href="#" className="aspect-square rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center hover:bg-blue-700 hover:border-blue-600 transition-all group shadow-lg hover:shadow-blue-900/20 hover:-translate-y-1">
+               <a href="https://www.linkedin.com/in/rudraksh-innovations-b16360399" target="_blank" rel="noopener noreferrer" className="aspect-square rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center hover:bg-blue-700 hover:border-blue-600 transition-all group shadow-lg hover:shadow-blue-900/20 hover:-translate-y-1">
                   <Linkedin className="w-5 h-5 text-slate-400 group-hover:text-white" />
                </a>
                <a href="https://wa.me/917874331074" target="_blank" rel="noopener noreferrer" className="aspect-square rounded-xl bg-slate-900 border border-white/5 flex items-center justify-center hover:bg-green-500 hover:border-green-400 transition-all group shadow-lg hover:shadow-green-900/20 hover:-translate-y-1">

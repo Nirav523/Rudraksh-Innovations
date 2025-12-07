@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import React, { useRef, useEffect } from 'react';
+import { motion, useMotionValue, useSpring, useTransform, useAnimation } from 'framer-motion';
 
 interface Project {
   id: number;
@@ -97,7 +97,45 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
 const Portfolio: React.FC = () => {
   // Duplicate projects for infinite loop
-  const infiniteProjects = [...projects, ...projects, ...projects];
+  const infiniteProjects = [...projects, ...projects];
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const x = useMotionValue(0);
+  const controls = useAnimation();
+
+  const startAnimation = () => {
+    if (!carouselRef.current) return;
+
+    const oneSetWidth = carouselRef.current.scrollWidth / 2;
+    const currentX = x.get();
+    const duration = 30; // Duration for a full loop
+
+    // To maintain consistent speed, calculate remaining duration
+    const remainingDistance = -oneSetWidth - (currentX % oneSetWidth);
+    const remainingDuration = (remainingDistance / -oneSetWidth) * duration;
+
+    controls.start({
+      x: -oneSetWidth,
+      transition: {
+        ease: 'linear',
+        duration: remainingDuration,
+        onComplete: () => {
+          x.set(0);
+          startAnimation(); // Manually loop
+        },
+      },
+    });
+  };
+
+  useEffect(() => {
+    // Delay to ensure dimensions are calculated before starting
+    const timeout = setTimeout(startAnimation, 200);
+
+    return () => {
+      clearTimeout(timeout);
+      controls.stop();
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run only once on mount
 
   return (
     <section id="portfolio" className="py-12 bg-slate-950 relative overflow-hidden scroll-mt-32">
@@ -121,14 +159,21 @@ const Portfolio: React.FC = () => {
       </div>
 
       {/* Horizontal Scrolling Area */}
-      <div className="relative w-full overflow-x-hidden py-10">
+      <motion.div 
+        ref={carouselRef} 
+        className="relative w-full overflow-x-hidden py-10 cursor-grab"
+        onHoverStart={() => controls.stop()}
+        onHoverEnd={startAnimation}
+      >
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-950 to-transparent z-20 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-950 to-transparent z-20 pointer-events-none" />
 
         <motion.div
-          className="flex cursor-grab active:cursor-grabbing pl-6"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 25, ease: "linear", repeat: Infinity }}
+          className="flex active:cursor-grabbing pl-6"
+          drag="x"
+          dragConstraints={{ right: 0, left: -(carouselRef.current ? carouselRef.current.scrollWidth - carouselRef.current.offsetWidth : 0) }}
+          style={{ x }}
+          animate={controls}
         >
           {infiniteProjects.map((project, index) => (
             <div key={`${project.id}-${index}`} className="perspective-1000">
@@ -136,7 +181,7 @@ const Portfolio: React.FC = () => {
             </div>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
