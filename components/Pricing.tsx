@@ -81,15 +81,16 @@ const Pricing: React.FC = () => {
                 ))}
               </ul>
               
-              <button 
-                className={`w-full py-4 rounded-xl font-bold transition-all duration-300 ${
+              <a
+                href="#contact"
+                className={`block text-center w-full py-4 rounded-xl font-bold transition-all duration-300 ${
                   plan.recommended
                     ? 'bg-violet-500 text-white hover:bg-violet-400 hover:scale-105 shadow-xl shadow-violet-500/20'
                     : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'
                 }`}
               >
                 Choose Plan
-              </button>
+              </a>
             </motion.div>
           ))}
         </div>
