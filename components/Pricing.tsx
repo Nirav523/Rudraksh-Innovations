@@ -6,13 +6,13 @@ import { PricingPlan } from '../types';
 const plans: PricingPlan[] = [
   {
     name: 'Starter',
-    price: '₹ 9999',
+    price: '₹ 6999',
     features: ['16 Social Posts/mo', 'Community Management', 'Monthly Report', '1 Reel'],
     recommended: false,
   },
   {
     name: 'Growth',
-    price: '₹ 12,499',
+    price: '₹ 10,499',
     features: ['20 Social Posts/mo', '2 Reels/Shorts', 'Community Management', 'Paid Ad Management', 'Monthly Reports'],
     recommended: true,
   },
